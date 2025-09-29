@@ -1,4 +1,6 @@
-# Auto detect text files and perform LF normalization
+create database loja;
+use loja;
+
 -- Usuários
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -7,6 +9,7 @@ CREATE TABLE usuarios (
     senha VARCHAR(255) NOT NULL
 );
 
+insert into usuarios values (null, "Ederson da Costa", "ederson@hotmail.com", "123123");
 -- Produtos
 CREATE TABLE produtos (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -15,6 +18,10 @@ CREATE TABLE produtos (
     imagem VARCHAR(255) NOT NULL
 );
 
+insert into produtos values (null, "camiseta", 200.00, "./upload/1.jpg");
+insert into produtos values (null, "short", 300.00, "./upload/2.jpg");
+
+select * from produtos;
 -- Carrinho
 CREATE TABLE carrinho (
     id INT AUTO_INCREMENT PRIMARY KEY,
